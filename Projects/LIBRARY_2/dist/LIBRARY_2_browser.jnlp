@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="LIBRARY_2_browser.jnlp">
+  <information>
+    <title>LIBRARY_2</title>
+    <vendor>akash</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-splash:C:/Users/akash/Documents/NetBeansProjects/LIBRARY_2/src/0a.gif "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="LIBRARY_2.jar" size="9553856" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.40-bin.jar" size="990927" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="library_2.LIBRARY_2"  name="LIBRARY_2" >
+  </applet-desc>
+  <update check="always"/>
+</jnlp>

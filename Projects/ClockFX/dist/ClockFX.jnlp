@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ClockFX.jnlp">
+  <information>
+    <title>ClockFX</title>
+    <vendor>akash</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ClockFX.jar" size="66449" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2400771" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ClockFX" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="clockfx.ClockFX"  name="ClockFX" />
+  <update check="always"/>
+</jnlp>

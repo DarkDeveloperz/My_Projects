@@ -1,0 +1,17 @@
+You might not be able to run this project because its entire database is saved in my computer.
+The database was created in mysql server and this software runs on local machine.
+I dont know how to upload its database thats why i am not uploading the database.
+
+I am attaching a .doc file which shows the UI and working of this software.
+
+I can show the demo if we meet in person.
+
+Its not a simple library management software its much more than that and have much more features.
+I request you to give me a chance to show you this awesome project and have a look at its UI and database.
+
+Thanks!! 
+
+name : Akash Tripathi
+reg. no. : RA1511003030444
+contact : 7055003964
+email : akash_pradip@srmuniv.edu.in

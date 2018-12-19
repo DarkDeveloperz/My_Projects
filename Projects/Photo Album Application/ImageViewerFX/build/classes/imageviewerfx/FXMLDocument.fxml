@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<!-- Developed by : Akash Tripathi on 12/12/2018. I am a software developer, graphics designer, web developer
+ I have worked on many softwares, websites and graphics
+ My work can be seen on my personal portfolio website: darkdeveloperz.github.io.-->
+
+<AnchorPane id="AnchorPane" fx:id="ap" cache="true" maxHeight="363.0" maxWidth="329.0" minHeight="100.0" minWidth="100.0" onKeyReleased="#changeImage" prefHeight="363.0" prefWidth="329.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imageviewerfx.FXMLDocumentController">
+   <children>
+      <Label fx:id="lbl" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutY="30.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.55" style="-fx-background-color: black;" textOverrun="CENTER_ELLIPSIS" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="img" cache="true" onDragDetected="#animation" onMouseClicked="#showProperties" pickOnBounds="true" preserveRatio="true" styleClass="img" AnchorPane.topAnchor="50.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <JFXButton fx:id="FXViewer" buttonType="RAISED" graphicTextGap="0.0" layoutX="85.0" layoutY="115.0" maxHeight="34.0" minHeight="34.0" prefHeight="34.0" ripplerFill="WHITE" styleClass="logo" text="        FX Viewer" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fx:id="logo" fitHeight="32.0" fitWidth="32.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="21.0" AnchorPane.topAnchor="21.0">
+         <image>
+            <Image url="@../images/icon_32x32.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="file_name" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="25.0" text="FX Viewer (Developed by Akash Tripathi)" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="open" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" onAction="#handleButtonAction" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="60.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="10.0" maxWidth="12.0" minHeight="10.0" minWidth="12.0" prefHeight="10.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_folder" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="min" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="99.0" layoutY="121.0" onAction="#minimize" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="20.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="2.0" maxWidth="10.0" minHeight="2.0" minWidth="10.0" prefHeight="2.0" prefWidth="10.0" ripplerFill="WHITE" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_min" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="close_btn" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" onMouseClicked="#close" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="10.0" maxWidth="10.0" minHeight="10.0" minWidth="10.0" prefHeight="10.0" prefWidth="10.0" ripplerFill="WHITE" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_cross" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="settings" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="121.0" layoutY="122.0" onMouseClicked="#soft_settings" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="20.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="12.0" maxWidth="12.0" minHeight="12.0" minWidth="12.0" prefHeight="12.0" prefWidth="12.0" ripplerFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_settings" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="pre_img" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="289.0" layoutY="310.0" onAction="#preImg" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="300.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="13.0" maxWidth="12.0" minHeight="13.0" minWidth="12.0" prefHeight="13.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_pre" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="next_img" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="266.0" layoutY="154.0" onAction="#nextImg" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="300.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="13.0" maxWidth="12.0" minHeight="13.0" minWidth="12.0" prefHeight="13.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_next" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="audio_on" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="150.0" layoutY="167.0" onAction="#audio_on_clicked" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="300.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="13.0" maxWidth="12.0" minHeight="13.0" minWidth="12.0" prefHeight="13.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_audio_on" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="audio_off" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="194.0" layoutY="182.0" onAction="#audio_off_clicked" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="300.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="13.0" maxWidth="12.0" minHeight="13.0" minWidth="12.0" prefHeight="13.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_audio_off" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="bulb_off" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="309.0" layoutY="310.0" onAction="#bulb_off_clicked" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="400.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="13.0" maxWidth="12.0" minHeight="13.0" minWidth="12.0" prefHeight="13.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_bulb_off" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="bulb_on" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="10.0" layoutY="310.0" onAction="#bulb_on_clicked" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="400.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="13.0" maxWidth="12.0" minHeight="13.0" minWidth="12.0" prefHeight="13.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_bulb_on" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <StackPane fx:id="sp" prefHeight="150.0" prefWidth="500.0" styleClass="sp" visible="false" />
+      <JFXButton fx:id="delete" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="150.0" layoutY="300.0" onAction="#delete_file" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="100.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="13.0" maxWidth="12.0" minHeight="13.0" minWidth="12.0" prefHeight="13.0" prefWidth="12.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_delete" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="pwidth" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="122.0" layoutY="158.0" text="Width" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pwidthval" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="132.0" layoutY="210.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="200.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pheight" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="132.0" layoutY="210.0" text="Height" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pheightval" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="142.0" layoutY="210.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="250.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ptype" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="142.0" layoutY="260.0" text="Type" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="300.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ptypeval" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="152.0" layoutY="260.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="300.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="ploc" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="152.0" layoutY="310.0" text="Location" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="plocval" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="162.0" layoutY="310.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="350.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="psize" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="162.0" layoutY="360.0" text="Size" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="400.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="psizeval" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="172.0" layoutY="360.0" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="400.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="hide" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="160.0" layoutY="243.0" onAction="#hide_file" onMouseEntered="#audio" prefHeight="30.0" prefWidth="30.0" ripplerFill="WHITE" styleClass="close_btn_back" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="100.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" maxHeight="11.0" maxWidth="11.0" minHeight="11.0" minWidth="11.0" prefHeight="11.0" prefWidth="11.0" ripplerFill="WHITE" textAlignment="CENTER" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="icon_hide" />
+                  <String fx:value="icon" />
+               </styleClass>
+            </JFXButton>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

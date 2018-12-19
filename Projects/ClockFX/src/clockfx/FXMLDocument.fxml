@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="parent" prefHeight="374.0" prefWidth="263.0" style="-fx-background-color: 0,100,0;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clockfx.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="top_bar" onMousePressed="#handleButtonAction" prefHeight="53.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;" styleClass="top_bar">
+         <children>
+            <ImageView fx:id="clock" fitHeight="29.0" fitWidth="29.0" layoutX="14.0" layoutY="13.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/clock.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="alarm" fitHeight="29.0" fitWidth="29.0" layoutX="117.0" layoutY="14.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/alarm.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="stopwatch" fitHeight="22.0" fitWidth="29.0" layoutX="69.0" layoutY="17.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/stopwatch.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="calander" fitHeight="22.0" fitWidth="29.0" layoutX="171.0" layoutY="17.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/calendar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="power" fitHeight="30.0" fitWidth="30.0" layoutX="213.0" layoutY="12.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/settings.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="clock_view" layoutY="57.0" prefHeight="312.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;">
+         <children>
+            <Label fx:id="month" alignment="CENTER" contentDisplay="CENTER" layoutY="35.0" prefHeight="30.0" prefWidth="263.0" text="Janruary" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="hour" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="84.0" prefHeight="30.0" prefWidth="93.0" text="05" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="c1" alignment="CENTER" contentDisplay="CENTER" layoutX="110.0" layoutY="77.0" prefHeight="69.0" prefWidth="22.0" text=":" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="minute" alignment="CENTER" contentDisplay="CENTER" layoutX="121.0" layoutY="84.0" prefHeight="30.0" prefWidth="93.0" text="30" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="dn" alignment="CENTER" contentDisplay="CENTER" layoutX="197.0" layoutY="111.0" prefHeight="30.0" prefWidth="52.0" text="AM" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="day" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="185.0" prefHeight="30.0" prefWidth="263.0" text="Saturday" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="date1" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="239.0" prefHeight="30.0" prefWidth="263.0" text="19 May 2018" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="stopwatch_view" layoutY="57.0" prefHeight="312.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;" visible="false">
+         <children>
+            <JFXToggleButton fx:id="stopwatch_start" layoutX="63.0" layoutY="44.0" text="Start" textFill="WHITE" toggleColor="#1565c0" toggleLineColor="#007bff" unToggleColor="#1565c0" unToggleLineColor="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXToggleButton>
+            <Label fx:id="hh1" layoutX="14.0" layoutY="122.0" text="00" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="c2" layoutX="78.0" layoutY="122.0" text=":" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="mm1" layoutX="105.0" layoutY="122.0" text="00" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="c3" layoutX="168.0" layoutY="122.0" text=":" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+            <Label fx:id="ss1" layoutX="194.0" layoutY="122.0" text="00" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="56.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="alarm_view" layoutY="57.0" prefHeight="312.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;" visible="false">
+         <children>
+            <ImageView fx:id="plus" fitHeight="30.0" fitWidth="41.0" layoutX="219.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/plus.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXTextField fx:id="hh" focusColor="WHITE" labelFloat="true" layoutX="14.0" layoutY="24.0" prefHeight="25.0" prefWidth="45.0" promptText="HH" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE" />
+            <Label fx:id="c4" layoutX="65.0" layoutY="22.0" text=":" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="mm" focusColor="WHITE" labelFloat="true" layoutX="78.0" layoutY="24.0" prefHeight="25.0" prefWidth="45.0" promptText="MM" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE" />
+            <JFXComboBox fx:id="am_pm" focusColor="WHITE" labelFloat="true" layoutX="132.0" layoutY="25.0" promptText="AM" style="-fx-text-inner-color: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXToggleButton fx:id="alarm_start" layoutX="193.0" layoutY="19.0" size="6.0" text="On" textFill="WHITE" toggleColor="#1565c0" toggleLineColor="#007bff" unToggleColor="#1565c0" unToggleLineColor="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="calander_view" layoutY="57.0" prefHeight="312.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;" visible="false">
+         <children>
+            <JFXDatePicker fx:id="date" defaultColor="#007bff" layoutX="45.0" layoutY="78.0" promptText="Date" style="-fx-prompt-text-fill: white; -fx-background-color: white; -fx-background-radius: 10;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXDatePicker>
+            <JFXTimePicker fx:id="time" defaultColor="#007bff" layoutX="45.0" layoutY="198.0" promptText="Time" style="-fx-prompt-text-fill: white; -fx-background-color: white; -fx-background-radius: 10;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXTimePicker>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="power_view" layoutY="57.0" prefHeight="312.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;" visible="false">
+         <children>
+            <ImageView fx:id="audio" fitHeight="25.0" fitWidth="29.0" layoutX="13.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/audioon.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="off" fitHeight="22.0" fitWidth="22.0" layoutX="227.0" layoutY="95.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/shutdown.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXColorPicker fx:id="colorPicker" layoutX="170.0" layoutY="273.0" onAction="#changeColor" prefHeight="24.0" prefWidth="81.0" promptText="Theme">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXColorPicker>
+            <Slider fx:id="slider" blockIncrement="0.1" layoutX="51.0" layoutY="175.0" max="1.0" min="0.2" onDragDetected="#changeOpacity" prefHeight="8.0" prefWidth="200.0" style="-fx-color: #1565C0;" value="1.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Slider>
+            <ImageView fx:id="info" fitHeight="22.0" fitWidth="22.0" layoutX="14.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/info.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="text3" layoutX="64.0" layoutY="71.0" text="darkdeveloperz.github.io" textFill="WHITE" AnchorPane.leftAnchor="54.0" AnchorPane.topAnchor="60.0">
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="text" layoutX="55.0" layoutY="17.0" text="Akash Tripathi " textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="text2" layoutX="55.0" layoutY="55.0" text="kumarakash1997.t@gmail.com" textFill="WHITE" AnchorPane.topAnchor="45.0">
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="text1" layoutX="55.0" layoutY="39.0" text="7055003964" textFill="WHITE" AnchorPane.bottomAnchor="257.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="149.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font name="Bodoni MT" size="12.0" />
+               </font>
+            </Label>
+            <Separator layoutX="55.0" layoutY="83.0" opacity="0.51" prefWidth="200.0" />
+            <Separator layoutX="55.0" layoutY="130.0" opacity="0.51" prefWidth="200.0" />
+            <Label fx:id="text4" layoutX="55.0" layoutY="95.0" text="Audio" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text5" layoutX="159.0" layoutY="95.0" text="Power" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="text6" layoutX="54.0" layoutY="144.0" text="Opacity" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font>
+            </Label>
+            <Slider fx:id="depthslider" blockIncrement="1.0" layoutX="55.0" layoutY="228.0" max="5.0" onMouseDragged="#changeDepth" prefHeight="14.0" prefWidth="194.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Slider>
+            <ImageView fx:id="opacity" fitHeight="29.0" fitWidth="30.0" layoutX="13.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/opacity.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="depth" fitHeight="29.0" fitWidth="30.0" layoutX="13.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/depth.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="text7" layoutX="54.0" layoutY="198.0" text="Depth" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="55.0" layoutY="255.0" opacity="0.5" prefWidth="200.0" />
+            <ImageView fx:id="theme" fitHeight="29.0" fitWidth="30.0" layoutX="13.0" layoutY="271.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/theme.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <JFXColorPicker fx:id="colorPicker1" layoutX="55.0" layoutY="274.0" onAction="#changeFontColor" prefHeight="24.0" prefWidth="81.0" promptText="Theme">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXColorPicker>
+            <JFXCheckBox fx:id="glass" checkedColor="#1565c0" layoutX="179.0" layoutY="147.0" onMousePressed="#handleCheck" text="Glass" textFill="WHITE" unCheckedColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

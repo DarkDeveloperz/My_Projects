@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="369.0" prefWidth="263.0" style="-fx-background-color: 0,100,0;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="settings.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="topbar" onMouseDragged="#handleButtonAction" prefHeight="53.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;">
+         <children>
+            <ImageView fx:id="btn_settings" layoutX="14.0" layoutY="11.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Settings.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btn_user" fitHeight="27.0" fitWidth="32.0" layoutX="88.0" layoutY="11.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/User.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btn_awards" fitHeight="27.0" fitWidth="27.0" layoutX="157.0" layoutY="11.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/award.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="btn_exit" fitHeight="32.0" fitWidth="20.0" layoutX="229.0" layoutY="17.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Shutdown.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="h_settings" layoutY="61.0" prefHeight="312.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="23.0" text="Touch Enabled" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton layoutX="156.0" layoutY="4.0" prefHeight="56.0" prefWidth="94.0" text="On" textFill="WHITE" toggleColor="#1565c0" toggleLineColor="WHITE" unToggleColor="#1565c0" unToggleLineColor="#0080ff" />
+            <Label layoutX="14.0" layoutY="44.0" prefHeight="32.0" prefWidth="136.0" text="Called 3D touch, the new&#10;technology on sense Pressure." textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="95.0" text="Auto Tune" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton layoutX="156.0" layoutY="76.0" prefHeight="56.0" prefWidth="94.0" text="On" textFill="WHITE" toggleColor="#1565c0" toggleLineColor="WHITE" unToggleColor="#1565c0" unToggleLineColor="#007bff" />
+            <Label layoutX="14.0" layoutY="116.0" prefHeight="32.0" prefWidth="136.0" text="uses IOT.&#10;The Internet Of Things" textFill="WHITE">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Separator layoutX="14.0" layoutY="153.0" opacity="0.85" prefHeight="5.0" prefWidth="236.0" />
+            <Label layoutX="14.0" layoutY="171.0" text="Screen Brightness" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Slider layoutX="14.0" layoutY="198.0" prefHeight="5.0" prefWidth="236.0" style="-fx-background-radius: 20;" value="30.0" />
+            <JFXCheckBox checkedColor="#1565c0" layoutX="12.0" layoutY="236.0" text="Auto Brightness" textFill="WHITE" unCheckedColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXCheckBox>
+            <JFXButton buttonType="RAISED" layoutX="189.0" layoutY="271.0" prefHeight="27.0" prefWidth="60.0" ripplerFill="#007bff" style="-fx-background-color: #1565C0; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;" text="Save" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="271.0" prefHeight="27.0" prefWidth="60.0" ripplerFill="#007bff" style="-fx-background-color: #1565C0; -fx-border-color: white; -fx-border-radius: 20; -fx-background-radius: 20;" text="Cancel" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="h_user" layoutY="61.0" prefHeight="312.0" prefWidth="263.0" style="-fx-background-color: #1565C0; -fx-background-radius: 6;" visible="false">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="116.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/account.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="88.0" layoutY="88.0" text="Akash Tripathi" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="116.0" text="darkdeveloperz.github.io" textFill="WHITE" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
