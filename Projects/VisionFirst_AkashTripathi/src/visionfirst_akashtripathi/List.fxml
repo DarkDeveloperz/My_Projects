@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="385.0" prefWidth="600.0" styleClass="ap" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visionfirst_akashtripathi.ListController">
+   <children>
+      <Label contentDisplay="CENTER" graphicTextGap="0.0" layoutX="8.0" layoutY="6.0" styleClass="bg" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="385.0" fitWidth="600.0" pickOnBounds="true" rotate="180.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../images/new.png" />
+         </image>
+      </ImageView>
+      <Label contentDisplay="CENTER" graphicTextGap="0.0" layoutX="22.0" layoutY="34.0" opacity="0.5" styleClass="form_bg" textAlignment="CENTER" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="40.0" />
+      <Label contentDisplay="CENTER" graphicTextGap="0.0" layoutX="16.0" layoutY="79.0" text="Vision First" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="close_btn" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="258.0" layoutY="81.0" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" onMouseClicked="#close" prefHeight="15.0" prefWidth="15.0" styleClass="close_btn" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="min_btn" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="320.0" layoutY="90.0" maxHeight="2.0" maxWidth="15.0" minHeight="2.0" minWidth="15.0" onAction="#minimize" prefHeight="2.0" prefWidth="15.0" styleClass="min_btn" textAlignment="CENTER" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="table" layoutX="14.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="col_sno" prefWidth="51.0" text="S. No." />
+          <TableColumn fx:id="col_c_name" prefWidth="169.0" text="Company Name" />
+            <TableColumn fx:id="col_c_add" prefWidth="157.0" text="Company Address" />
+            <TableColumn fx:id="col_createdby" prefWidth="101.0" text="Created By" />
+            <TableColumn fx:id="col_status" prefWidth="110.0" text="Status" />
+        </columns>
+      </TableView>
+      <Label contentDisplay="CENTER" graphicTextGap="0.0" layoutX="285.0" layoutY="18.0" text="User" textAlignment="CENTER" AnchorPane.topAnchor="18.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="back" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="605.0" layoutY="40.0" maxHeight="15.0" maxWidth="20.0" minHeight="15.0" minWidth="20.0" onAction="#backon" onMouseClicked="#close" prefHeight="15.0" prefWidth="20.0" styleClass="back" textAlignment="CENTER" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="50.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

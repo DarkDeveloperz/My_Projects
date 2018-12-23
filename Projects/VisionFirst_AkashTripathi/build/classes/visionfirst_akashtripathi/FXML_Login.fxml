@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="481.0" prefWidth="320" styleClass="ap" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="visionfirst_akashtripathi.FXML_LoginController">
+   <children>
+      <Label fx:id="bg" contentDisplay="CENTER" graphicTextGap="0.0" layoutY="-8.0" prefHeight="409.0" prefWidth="320.0" styleClass="bg" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+      <ImageView fitHeight="420.0" fitWidth="300.0" layoutX="14.0" layoutY="50.0" pickOnBounds="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="55.0">
+         <image>
+            <Image url="@../images/new.png" />
+         </image>
+      </ImageView>
+      <Circle fill="WHITE" layoutX="161.0" layoutY="50.0" radius="52.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="user" AnchorPane.topAnchor="0.0" />
+      <ImageView fitHeight="83.0" fitWidth="85.0" layoutX="120.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../images/avatar.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="form_bg" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="75.0" layoutY="248.0" opacity="0.6" styleClass="form_bg" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="100.0" />
+      <Label fx:id="register" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="133.0" layoutY="111.0" onMouseClicked="#register_clicked" text="Register" textAlignment="CENTER" textFill="WHITE" underline="true" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="110.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="login" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="143.0" layoutY="121.0" onMouseClicked="#login_clicked" text="Login" textAlignment="CENTER" textFill="WHITE" underline="true" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="110.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="l_user_name" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="26.0" layoutY="163.0" text="User Name" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="160.0" />
+      <JFXTextField fx:id="user_name" focusColor="WHITE" layoutX="162.0" layoutY="161.0" styleClass="tf" unFocusColor="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="155.0" />
+      <JFXButton fx:id="close_btn" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="248.0" layoutY="71.0" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" onMouseClicked="#close" prefHeight="15.0" prefWidth="15.0" styleClass="close_btn" textAlignment="CENTER" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="min_btn" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="310.0" layoutY="80.0" maxHeight="2.0" maxWidth="15.0" minHeight="2.0" minWidth="15.0" onAction="#minimize" prefHeight="2.0" prefWidth="15.0" styleClass="min_btn" textAlignment="CENTER" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="82.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="l_email" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="170.0" text="Email" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="200.0" />
+      <JFXTextField fx:id="email" focusColor="WHITE" layoutX="175.0" layoutY="165.0" styleClass="tf" unFocusColor="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="195.0" />
+      <Label fx:id="l_mobile" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="210.0" text="Mobile" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="240.0" />
+      <JFXTextField fx:id="mobile" focusColor="WHITE" layoutX="175.0" layoutY="205.0" styleClass="tf" unFocusColor="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="235.0" />
+      <Label fx:id="l_password" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="250.0" text="Password" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="280.0" />
+      <JFXPasswordField fx:id="password" focusColor="WHITE" layoutX="175.0" layoutY="245.0" styleClass="tf" unFocusColor="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="275.0" />
+      <Label fx:id="l_role" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="290.0" text="Role" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="320.0" />
+      <JFXRadioButton fx:id="admin" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="27.0" layoutY="379.0" text="Admin" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="360.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <toggleGroup>
+            <ToggleGroup fx:id="role" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="user" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="190.0" layoutY="320.0" text="User" textAlignment="CENTER" textFill="WHITE" toggleGroup="$role" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="400.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXRadioButton>
+      <JFXButton fx:id="submit" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="23.0" layoutY="433.0" onAction="#submit" prefWidth="100.0" ripplerFill="WHITE" styleClass="btn" text="Submit" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="440.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="reset" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="450.0" onAction="#reset" prefWidth="100.0" ripplerFill="WHITE" styleClass="btn" text="Reset" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="440.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label contentDisplay="CENTER" graphicTextGap="0.0" layoutX="6.0" layoutY="69.0" text="Vision First" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="75.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="l_user_name1" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="170.0" text="User Name" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="160.0" />
+      <JFXTextField fx:id="user_name1" focusColor="WHITE" layoutX="175.0" layoutY="165.0" styleClass="tf" unFocusColor="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="155.0" />
+      <Label fx:id="l_password1" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="290.0" text="Password" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="200.0" />
+      <JFXPasswordField fx:id="password1" focusColor="WHITE" layoutX="175.0" layoutY="285.0" styleClass="tf" unFocusColor="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="195.0" />
+      <JFXButton fx:id="submit1" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="30.0" layoutY="450.0" onAction="#lSubmit" prefWidth="100.0" ripplerFill="WHITE" styleClass="btn" text="Submit" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="440.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="register1" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="110.0" layoutY="120.0" onMouseClicked="#register_clicked" text="/" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="165.0" AnchorPane.topAnchor="110.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>
